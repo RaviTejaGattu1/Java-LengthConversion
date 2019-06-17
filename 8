@@ -1,0 +1,22 @@
+
+public class BarkingDog {
+    public static void main(String[] args) {
+        double answer=calcFeetAndInchesToCms(157);
+        System.out.println(answer);
+        double answer2=calcFeetAndInchesToCms(6,0);
+        System.out.println(answer2);
+    }
+
+    public static void getDurationString(int minutes, int seconds) {
+        if (minutes>=0&&seconds<60&&minutes>=0){
+            System.out.println((min/60)+"h"+(((min%60)+seconds)/60)+" m"+(((min%60)+seconds)%60)+" s");
+        }
+        System.out.println("Invalid Value");
+    }
+    public static double calcFeetAndInchesToCms(double inches){
+        if(inches>-1){
+            return (calcFeetAndInchesToCms((int)(inches/12),(int)(inches%12)));
+        }return -1;
+    }
+
+}
